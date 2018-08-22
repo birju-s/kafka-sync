@@ -21,8 +21,14 @@ Five requests should be processed with multithreading.
  
 -----------------
 
+In order to setup  download the code and just run it in IDE ( Spring boot )
+Or please let me know if you require jar directly
 
+Run kafka and run the following commands ( Windows )
+1) kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic requestfordriver-topic
+2) kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic requestreplyfordriver-topic
 
+-------------------
 Type of Requests
 
 # To request a driver for customerId : 1 - copied from postman
@@ -31,8 +37,6 @@ POST /journey HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 Cache-Control: no-cache
-Postman-Token: 29545317-a5bc-465a-9d9d-584c2bfa4469
-
 {
 	"customerId" : "1"
 }
@@ -44,8 +48,6 @@ POST /release HTTP/1.1
 Host: localhost:8080
 Content-Type: application/json
 Cache-Control: no-cache
-Postman-Token: 4f2df104-63c9-27d1-5dd2-7028c98fb339
-
 {
 	"id" : "11"
 }
